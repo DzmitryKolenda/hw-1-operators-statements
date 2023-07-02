@@ -98,17 +98,21 @@ const calculateResult = (num1, num2, operation) => {
 // Create multiply table multiplying all digits from 2 t0 9 on 1 - 10 and write result in string
 // Compare your result with string in test
 const getMultiplicationTable = () => {
-let message1 = '';
-let message2 = '';
+let message = ``;
+let message1 = ``;
+let message2 = ``;
 
 for (let i = 2; i < 10; i++) {
-  message1 = `==== ${i} ==== \n`;
-
+  message = message + `==== ${i} ==== \n`;
+  
   for (let j = 1; j <= 10; j++) {
-    message2 = message1 + `${i} * ${j} = ${i * j} \n`;
-    return message1;
+    message = message + `${i} * ${j} = ${i * j} \n`;
+    
   }
+  
 }
+
+return message;
 };
 
 module.exports = {
